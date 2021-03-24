@@ -82,7 +82,7 @@ function createContours() {
   }
 
   for (let i = oldnum; i < contourNum; i++) {
-    ggbApplet.evalCommand("c" + i + "=ImplicitCurve(f(x,y)-offset-interval*" + i + ")");
+    ggbApplet.evalCommand("c" + i + "=ImplicitCurve(f(x,y)-offset-interval*" + (i - 1) + ")");
     ggbApplet.setLabelVisible("c" + i, false);
   }
 
